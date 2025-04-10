@@ -178,7 +178,7 @@ public class UserCtl extends BaseCtl {
 		bean.setMobileNo(DataUtility.getString(request.getParameter("mobileNo")));
 
 		bean.setDob(DataUtility.getDate(request.getParameter("dob")));
-		System.out.println("dob" + bean.getDob());
+		System.out.println("dob = " + bean.getDob());
 
 		populateDTO(bean, request);
 

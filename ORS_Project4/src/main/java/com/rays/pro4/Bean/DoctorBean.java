@@ -48,7 +48,7 @@ public class DoctorBean extends BaseBean {
 
 	@Override
 	public String getValue() {
-		return name;
+		return dob + "";
 	}
 
 }

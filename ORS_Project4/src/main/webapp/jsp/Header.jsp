@@ -90,6 +90,8 @@
 					href="<%=ORSView.PATIENT_LIST_CTL%>">Patient List</a> | <a
 					href="<%=ORSView.CUSTOMER_CTL%>">Add Customer</a> | <a
 					href="<%=ORSView.CUSTOMER_LIST_CTL%>">Customer List</a> | <a
+					href="<%=ORSView.ORDER_CTL%>">Add Order</a>| <a
+					href="<%=ORSView.ORDER_LIST_CTL%>">Order List</a>| <a
 					target="blank" href="<%=ORSView.JAVA_DOC_VIEW%>">Java Doc</a> <%
  	}
  %> <%
