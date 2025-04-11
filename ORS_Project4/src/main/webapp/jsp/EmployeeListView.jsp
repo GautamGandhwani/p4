@@ -77,21 +77,20 @@
 					</label> <input type="text" name="fullName"
 						placeholder="Enter product Name"
 						value="<%=ServletUtility.getParameter("fullName", request)%>">&nbsp;
-						
-						<label>BirthDate</label>
-					<input type="text" name="birthDate" id="udate" placeholder="Enter Birthdate"
+
+						<label>BirthDate</label> <input type="text" name="birthDate"
+						id="udate" placeholder="Enter Birthdate"
 						value="<%=ServletUtility.getParameter("birthDate", request)%>">
-						
-						<label>UserName</label>
-					<input type="text" name="userName"  placeholder="Enter UserName"
+
+						<label>UserName</label> <input type="text" name="userName"
+						placeholder="Enter UserName"
 						value="<%=ServletUtility.getParameter("userName", request)%>">
-						
-						
-					<input type="submit" name="operation"
-						value="<%=EmployeeListCtl.OP_SEARCH%>"> &nbsp;
-					<input type="submit" name="operation"
-						value="<%=EmployeeListCtl.OP_RESET%>">
-					</td>
+
+
+						<input type="submit" name="operation"
+						value="<%=EmployeeListCtl.OP_SEARCH%>"> &nbsp; <input
+						type="submit" name="operation"
+						value="<%=EmployeeListCtl.OP_RESET%>"></td>
 				</tr>
 			</table>
 			<br>
@@ -113,7 +112,7 @@
 
 				<%
 					while (it.hasNext()) {
-							bean =it.next();
+							bean = it.next();
 				%>
 
 

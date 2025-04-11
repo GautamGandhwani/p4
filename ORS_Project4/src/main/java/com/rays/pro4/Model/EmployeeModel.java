@@ -15,11 +15,11 @@ import com.rays.pro4.Exception.DuplicateRecordException;
 import com.rays.pro4.Util.JDBCDataSource;
 
 public class EmployeeModel {
-	
+
 	private static Logger log = Logger.getLogger(EmployeeModel.class);
 
 	public Integer nextPk() throws Exception {
-		
+
 		log.debug("Model nextPK Started");
 
 		int pk = 0;
@@ -47,13 +47,13 @@ public class EmployeeModel {
 		if (existBean != null) {
 			throw new DuplicateRecordException("FullName already exist..!!");
 		}
-		
+
 		EmployeeBean existbean1 = findByUserName(bean.getUserName());
-		
+
 		if (existbean1 != null) {
 			throw new DuplicateRecordException("UserName is allready exist...");
 		}
-		
+
 		int pk = nextPk();
 
 		Connection conn = JDBCDataSource.getConnection();
@@ -66,7 +66,6 @@ public class EmployeeModel {
 		pstmt.setString(4, bean.getPassword());
 		pstmt.setDate(5, new java.sql.Date(bean.getBirthDate().getTime()));
 		pstmt.setString(6, bean.getContactNumber());
-		
 
 		int i = pstmt.executeUpdate();
 
@@ -186,16 +185,18 @@ public class EmployeeModel {
 			if (bean.getFullName() != null && bean.getFullName().length() > 0) {
 				sql.append(" and full_name like '" + bean.getFullName() + "%'");
 			}
-			
+
 			if (bean.getBirthDate() != null && bean.getBirthDate().getTime() > 0) {
-				Date d  = new Date(bean.getBirthDate().getTime());
+				Date d = new Date(bean.getBirthDate().getTime());
 				sql.append(" and birth_date = '" + d + "'");
 			}
-			
-			if (bean.getUserName() != null && bean.getUserName().length() > 0) {
-				sql.append(" and user_name like '" + bean.getUserName() + "'");
-			}
 
+			if (bean.getUserName() != null && bean.getUserName().length() > 0) {
+				sql.append(" and user_name like '" + bean.getUserName() + "%'");
+			}
+			if (bean.getContactNumber() != null && bean.getContactNumber().length() > 0) {
+				sql.append(" and contact_number like '" + bean.getContactNumber() + "%'");
+			}
 		}
 
 		if (pageSize > 0) {
@@ -232,7 +233,7 @@ public class EmployeeModel {
 		}
 		return list;
 	}
-	
+
 	private EmployeeBean findByUserName(String userName) throws Exception {
 
 		Connection conn = null;

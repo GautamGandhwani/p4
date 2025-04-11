@@ -120,7 +120,4 @@ public class EmployeeListCtl extends BaseCtl {
 		// TODO Auto-generated method stub
 		return ORSView.EMPLOYEE_LIST_VIEW;
 	}
-	
-	
-
 }
