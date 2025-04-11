@@ -140,7 +140,6 @@
 						name="operation" value="<%=DoctorCtl.OP_SAVE%>"> &nbsp;
 						&nbsp; <input type="submit" name="operation"
 						value="<%=DoctorCtl.OP_RESET%>"></td>
-
 					<%
 						}
 					%>

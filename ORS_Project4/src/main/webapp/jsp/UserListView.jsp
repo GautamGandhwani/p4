@@ -65,7 +65,6 @@
 				int next = DataUtility.getInt(request.getAttribute("nextlist").toString());
 			%>
 
-
 			<%
 				int pageNo = ServletUtility.getPageNo(request);
 				int pageSize = ServletUtility.getPageSize(request);

@@ -91,7 +91,9 @@
 					href="<%=ORSView.CUSTOMER_CTL%>">Add Customer</a> | <a
 					href="<%=ORSView.CUSTOMER_LIST_CTL%>">Customer List</a> | <a
 					href="<%=ORSView.ORDER_CTL%>">Add Order</a>| <a
-					href="<%=ORSView.ORDER_LIST_CTL%>">Order List</a>| <a
+					href="<%=ORSView.ORDER_LIST_CTL%>">Order List</a>|<a
+					href="<%=ORSView.EMPLOYEE_CTL%>">Add Employee</a>| <a
+					href="<%=ORSView.EMPLOYEE_LIST_CTL%>">Employee List</a>| <a
 					target="blank" href="<%=ORSView.JAVA_DOC_VIEW%>">Java Doc</a> <%
  	}
  %> <%
